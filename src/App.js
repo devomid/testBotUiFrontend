@@ -1,10 +1,11 @@
 import './App.css';
+import {Box} from '@mui/joy'
 
 function App() {
   return (
-    <div className="App">
-      <h1>This me in front</h1>
-    </div>
+    <Box>
+
+    </Box>
   );
 }
 
