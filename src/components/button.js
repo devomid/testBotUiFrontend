@@ -4,7 +4,7 @@ import React from 'react'
 const Buttt = ({click}) => {
     
     return (
-        <Box sx={{ display: 'flex', height: '100vh', width: '100%', justifyContent: 'center', alignItems: 'center' }}>
+        <Box>
             <Button onClick={click}>
                 this is button
             </Button>
