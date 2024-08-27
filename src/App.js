@@ -1,8 +1,11 @@
 import './App.css';
-import { Box, Button } from '@mui/joy';
+import { Box, Button, Typography } from '@mui/joy';
 import Buttt from './components/button';
+import { useState } from 'react';
 
 function App() {
+  const [text, setText] = useState('');
+
   const click = async () => {
     try {
       const response = await fetch('https://testbotuibackend.onrender.com', {
@@ -13,7 +16,8 @@ function App() {
       });
       if (response.ok) {
         const responseData = await response.json();
-        console.log('Response:', responseData);
+        console.log('Response:', await responseData);
+        setText(responseData.message);
       }
     } catch (error) {
       console.error('Error:', error);
@@ -23,6 +27,9 @@ function App() {
   return (
     <Box>
       <Buttt click={click} />
+      <Typography>
+        {text}
+      </Typography>
     </Box>
   );
 }
