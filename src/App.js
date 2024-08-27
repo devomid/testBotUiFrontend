@@ -16,7 +16,7 @@ function App() {
       });
       if (response.ok) {
         const responseData = await response.json();
-        console.log('Response:', await responseData);
+        // console.log('Response:', await responseData);
         setText(responseData.message);
       }
     } catch (error) {
@@ -28,7 +28,7 @@ function App() {
     <Box>
       <Buttt click={click} />
       <Typography>
-        {text}
+        {text && text}
       </Typography>
     </Box>
   );
